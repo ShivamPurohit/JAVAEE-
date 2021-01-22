@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="alien" class="com.codesp07.SpringDemo.Alien" autowire="byType">
+<!-- from byName id is selcted (check Alien.java property variable name) and byType Type of the variable is selected in this case both are reference variable of type computer   -->
+<!-- <constructor-arg value="12"></constructor-arg>   -->
+
+ <property name="age" value="10" ></property> 
+
+<!-- <property name="com" ref="desktop"></property>  -->
+</bean>
+
+<bean id="com" class="com.codesp07.SpringDemo.Laptop"></bean>
+
+<bean id="desktop" class="com.codesp07.SpringDemo.Desktop" primary="true"></bean>
+
+</beans>
